@@ -24,13 +24,13 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
   if ($_GET["username"]!=null && $_GET["username"]!=""){
     //cream les variables amb els valors del formulari
     $username = $_GET["username"];
-    if(!emailValidation($_GET["email"]){
-      echo "El correu electrònic no és vàlid";
+    if(!emailValidation($_GET["email"])){
+      echo "El correu electrònic no és vàlid.<br>";
     }
     else{
       $email = $_GET["email"];
     }
-    if(!pwdValidation($_GET["password"],$_GET["passwordConfirm"])){
+    if(!pwdValidation($_GET["password"],$_GET["password2"])){
       $pwdValidationMessage="<b>Les contrasenyes no són iguals.</b> Torna-les a escriure.<br>";
     }else{
       $password = encryptPass($_GET["password"]);
@@ -59,5 +59,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
               header("Location: index.html");
 	      }
 	 $db->close();
-  }
+ }
 }
+}
+?>
