@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -140,7 +143,6 @@
         }
     </style>
 </head>
-
 <body width="100%" bgcolor="#F1F1F1" style="margin: 0; mso-line-height-rule: exactly;">
     <center style="width: 100%; background: #F1F1F1; text-align: left;">
         <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
@@ -167,12 +169,12 @@
                                         <table>
                                             <tr>
                                                 <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;">
-                                                    <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 30px; line-height: 36px; color: #ffffff; font-weight: bold;">WELCOME NICK (LINIA 170)</h1>
+                                                    <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 30px; line-height: 36px; color: #ffffff; font-weight: bold;">WELCOME <?php echo $_SESSION['username']; ?></h1>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td valign="top" style="text-align: center; padding: 10px 20px 15px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #fff;">
-                                                    <p style="margin: 0;">Welcome to our website, NICK (LINIA 175). In case, if you aren't the owner close the website, <H2>IT IS A CRIME</H2></p>
+                                                    <p style="margin: 0;">Welcome to our website, <?php echo $_SESSION['username']; ?>. In case, if you aren't the owner close the website, <H2>IT IS A CRIME</H2></p>
                                                 </td>
                                             </tr>
                                             <tr>

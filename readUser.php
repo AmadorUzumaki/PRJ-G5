@@ -16,11 +16,13 @@ if ($conn->connect_error) {
 $sql = "SELECT password FROM users where username='$username'";
 $result_select = $conn->query($sql);
 $passwords=$result_select->fetch_assoc();
+session_start();
+$_SESSION['username']=$username;
 //echo $passwords['password'];
 //comprovam si l'usuari existeix comparant els resultats
 //echo "Verificació:", pwdVerfication($password,$passwords['password']);
 if ($passwords && pwdVerification($password,$passwords['password'])) {
-  echo "Pots inciar sessió amb aquest usuari.";
+  header("Location: prueba_login.php");
 }
 elseif(!pwdVerification($password,$passwords['password'])) {
 	echo "La contrasenya no és correcta";
