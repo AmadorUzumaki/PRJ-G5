@@ -197,6 +197,7 @@ button.social-signin.google {
 					else{
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
+					?>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>

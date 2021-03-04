@@ -29,6 +29,7 @@ session_start();
 					else{
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
+					?>
 				</li>
 				<li>
 					<a href="login.php"><span>LOGIN</span></a>
