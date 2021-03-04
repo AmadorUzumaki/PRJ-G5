@@ -15,17 +15,18 @@ if ($conn->connect_error) {
 //el select que utilitzarem per cercar l'usuari a la base de dades.
 $sql = "SELECT * FROM users where username='$username'";
 $result_select = $conn->query($sql);
-$passwords=$result_select->fetch_assoc();
+$user=$result_select->fetch_assoc();
 session_start();
-$_SESSION['username']=$username;
+$_SESSION['username']=$user['username'];
+$_SESSION['rol']=$user['rol'];
 echo $username,"<br>";
 echo $password,"<br>";
 echo $passwords['password'],"<br>";
 //comprovam si l'usuari existeix comparant els resultats
-if (password_verify($password,$passwords['password'])) {
+if (password_verify($password,$user['password'])) {
   header("Location: index.php");
 }
-elseif(!pwdVerification($password,$passwords['password'])) {
+elseif(!pwdVerification($password,$user['password'])) {
 	echo "La contrasenya no és correcta";
 }else {
   echo "Aquest usuari no existeix.";
