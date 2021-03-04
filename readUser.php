@@ -26,7 +26,7 @@ echo $passwords['password'],"<br>";
 if (password_verify($password,$user['password'])) {
   header("Location: index.php");
 }
-elseif(!pwdVerification($password,$user['password'])) {
+elseif(!pwdVerification($password,$user['password']) && $user['username']) {
 	echo "La contrasenya no és correcta";
 }else {
   echo "Aquest usuari no existeix.";
