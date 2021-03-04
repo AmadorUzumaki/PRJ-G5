@@ -13,18 +13,15 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 //el select que utilitzarem per cercar l'usuari a la base de dades.
-$sql = "SELECT password FROM users where username='$username'";
+$sql = "SELECT * FROM users where username='$username'";
 $result_select = $conn->query($sql);
 $passwords=$result_select->fetch_assoc();
 session_start();
 $_SESSION['username']=$username;
-echo $username;
-echo $password;
-echo $passwords['password'];
+echo $username,"<br>";
+echo $password,"<br>";
+echo $passwords['password'],"<br>";
 //comprovam si l'usuari existeix comparant els resultats
-echo "Verificació:", password_verify($password,$passwords['password']);
-//echo pwdVerification($password,$passwords['password']);
-//if ($passwords && pwdVerification($password,$passwords['password'])) {
 if (password_verify($password,$passwords['password'])) {
   header("Location: index.php");
 }

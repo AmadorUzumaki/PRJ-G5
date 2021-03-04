@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
               echo "L'usuari ja existeix, prova un altre nom d'usuari.</br>";
         }else{
 		if(isset($password_ins) and emailValidation($email)){
-              $query_insert="INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password_ins')";
+              $query_insert="INSERT INTO users (username, email, password, rol) VALUES ('$username', '$email', '$password_ins','User')";
               echo "query_insert $query_insert</br>";
               //insertar l'usuari a la base de dades
               $result = $db->query($query_insert);
