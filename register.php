@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -187,7 +190,14 @@ button.social-signin.google {
 					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li>
-					<a href="login.php"><span>LOGIN</span></a>
+					<?php
+					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+						echo "Welcome, ". $_SESSION['username'];
+					}
+					else{
+						echo "<a href='login.php'><span>LOGIN</span></a>";
+					}
+					?>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
