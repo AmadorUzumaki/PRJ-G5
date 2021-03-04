@@ -84,7 +84,7 @@ span.psw {
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>
 		<div id="body">
-		<form action="readUser.php" method="post">
+		<form action="readUser.php" method="get">
   <div class="container">
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
