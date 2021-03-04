@@ -24,9 +24,9 @@ if (password_verify($password,$user['password'])) {
   header("Location: index.php");
 }
 elseif(!pwdVerification($password,$user['password']) && $user['username']) {
-	echo "La contrasenya no és correcta";
+	$loginMsg="La contrasenya no és correcta";
 }else {
-  echo "Aquest usuari no existeix.";
+  $"Aquest usuari no existeix.";
 }
 
 $conn->close();
