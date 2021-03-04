@@ -22,6 +22,9 @@ session_start();
 					<a href="about.php"><span>About</span></a>
 				</li>
 				<li>
+					<a href="register.php"><span>Register</span></a>
+				</li>
+				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
 						echo "Welcome, ". $_SESSION['username'];
@@ -30,9 +33,6 @@ session_start();
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
 					?>
-				</li>
-				<li>
-					<a href="login.php"><span>LOGIN</span></a>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
