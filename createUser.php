@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
               echo "query_insert $query_insert</br>";
               //insertar l'usuari a la base de dades
               $result = $db->query($query_insert);
-              header("Location: index.html");
+              header("Location: index.php");
 		}
 	      }
 	 $db->close();

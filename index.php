@@ -13,16 +13,16 @@ session_start();
 		<div id="header">
 			<ul>
 				<li class="current">
-					<a href="index.html"><span>Home</span></a>
+					<a href="index.php"><span>Home</span></a>
 				</li>
 				<li>
-					<a href="packages.html"><span>Adventures</span></a>
+					<a href="packages.php"><span>Adventures</span></a>
 				</li>
 				<li>
-					<a href="about.html"><span>About</span></a>
+					<a href="about.php"><span>About</span></a>
 				</li>
 				<li>
-					<a href="register.html"><span>Register</span></a>
+					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li>
 					<?php
@@ -30,12 +30,12 @@ session_start();
 						echo "Welcome, ". $_SESSION['username'];
 					}
 					else{
-						echo "<a href='login.html'><span>LOGIN</span></a>";
+						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
 					?>
 				</li>
 			</ul>
-			<a href="index.html" id="logo"><img src="images/logo.png" alt="Logo"></a>
+			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>
 		<div id="body">
 			<img src="images/adventure.png" alt="Image">
@@ -66,7 +66,7 @@ session_start();
 							<span class="price">$ 60</span>
 						</li>
 					</ul>
-					<a href="packages.html" class="view">View All</a>
+					<a href="packages.php" class="view">View All</a>
 				</div>
 				<div class="packages">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/wJF5NXygL4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -54,7 +54,7 @@
                             </ul>
                           </div>
                         </div>
-                        <a href="register.html"><button class="button button2">Volver a registrarse</button></a>
+                        <a href="register.php"><button class="button button2">Volver a registrarse</button></a>
     		        </div>
     		        <div class="col-md-6">
 

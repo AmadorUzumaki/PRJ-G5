@@ -66,22 +66,22 @@ span.psw {
 		<div id="header">
 			<ul>
 				<li>
-					<a href="index.html"><span>Home</span></a>
+					<a href="index.php"><span>Home</span></a>
 				</li>
 				<li>
-					<a href="packages.html"><span>Adventures</span></a>
+					<a href="packages.php"><span>Adventures</span></a>
 				</li>
 				<li>
-					<a href="about.html"><span>About</span></a>
+					<a href="about.php"><span>About</span></a>
 				</li>
 				<li>
-					<a href="register.html"><span>Register</span></a>
+					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li class="current">
-					<a href="login.html"><span>LOGIN</span></a>
+					<a href="login.php"><span>LOGIN</span></a>
 				</li>
 			</ul>
-			<a href="index.html" id="logo"><img src="images/logo.png" alt="Logo"></a>
+			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>
 		<div id="body">
 		<form action="readUser.php" method="post">
@@ -100,7 +100,7 @@ span.psw {
 
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="forget.html">password?</a></span>
+    <span class="psw">Forgot <a href="forget.php">password?</a></span>
   </div>
 </form>
 

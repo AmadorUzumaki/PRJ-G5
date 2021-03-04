@@ -21,22 +21,22 @@ function MostrarOcultar(capa,enlace)
 		<div id="header">
 			<ul>
 				<li>
-					<a href="index.html"><span>Home</span></a>
+					<a href="index.php"><span>Home</span></a>
 				</li>
 				<li>
-					<a href="packages.html"><span>Adventures</span></a>
+					<a href="packages.php"><span>Adventures</span></a>
 				</li>
 				<li>
-					<a href="about.html"><span>About</span></a>
+					<a href="about.php"><span>About</span></a>
 				</li>
 				<li>
-					<a href="register.html"><span>Register</span></a>
+					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li>
-					<a href="login.html"><span>LOGIN</span></a>
+					<a href="login.php"><span>LOGIN</span></a>
 				</li>
 			</ul>
-			<a href="index.html" id="logo"><img src="images/logo.png" alt="Logo"></a>
+			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>
 <body>
   <div class="container" align="center">
@@ -82,7 +82,7 @@ function MostrarOcultar(capa,enlace)
 		                                             </div>
 	                                         </div>
                                           </div>
-																					<a href="login.html">LOGIN</a>
+																					<a href="login.php">LOGIN</a>
                                     </div>
                                     <!-- ACABA AQUIEL CODIGP DE PONER LA PASSWORD -->
                                   </fieldset>
