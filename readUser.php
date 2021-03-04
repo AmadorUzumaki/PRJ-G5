@@ -19,9 +19,6 @@ $user=$result_select->fetch_assoc();
 session_start();
 $_SESSION['username']=$user['username'];
 $_SESSION['rol']=$user['rol'];
-echo $username,"<br>";
-echo $password,"<br>";
-echo $passwords['password'],"<br>";
 //comprovam si l'usuari existeix comparant els resultats
 if (password_verify($password,$user['password'])) {
   header("Location: index.php");
