@@ -48,9 +48,13 @@
                             <hr>
                             <ul >
                             <h5>El possible error sea :</h5>
-                                <li>El correu no és vàl·lid, torna a provar.</li>
-                                <li><b>Les contrasenyes no són iguals.</b> Torna-les a escriure.<br></li>
-                                <li>L'usuari ja existeix, prova un altre nom d'usuari</li>
+                            <?php
+                            include "createUser.php";
+                            print_r($registerError);
+                            foreach ($registerError as $Error){
+                              echo "<li>",$Error,"</li>";
+                            }
+                            ?>
                             </ul>
                           </div>
                         </div>

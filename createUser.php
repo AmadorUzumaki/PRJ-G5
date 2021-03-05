@@ -6,13 +6,14 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
     //cream les variables amb els valors del formulari
     $username = $_GET["username"];
     $email=$_GET['email'];
+    $registerError= array();
     if(isset($email)){
       if(!emailValidation($email))
-        echo  "El correu no és vàl·lid, torna a provar.<br>";//type the message will be shown to the user
+        $registerError[]="El correu no és vàl·lid, torna a provar.<br>";
     }
     if((isset($_GET['password']))&&(isset($_GET['password2']))){
       if(!pwdValidation($_GET['password'],$_GET['password2'])){
-        echo "<b>Les contrasenyes no són iguals.</b> Torna-les a escriure.<br>";
+        $registerError[]="<b>Les contrasenyes no són iguals.</b> Torna-les a escriure.<br>";
       }else{
           $password_ins = encryptPass($_GET["password"]);
       }
@@ -26,17 +27,23 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
       exit();
     }else{
       //cercam si l'usuari ja existeix a la base de dades
-      $query_select="Select email from users where username='$username'";
+      $query_select="Select * from users where username='$username'";
       //echo "query_select $query_select</br>";
       $result_select = $db->query($query_select);
       $users=$result_select->fetch_object();
       //comprovam que l'usuari no existeix a la base de dades per evitar repetició d'usuaris.
        if($users != null){
-              echo "L'usuari ja existeix, prova un altre nom d'usuari.</br>";
+              $registerError[]="L'usuari ja existeix, prova un altre nom d'usuari.</br>";
+              header("Location: errores.php");
+              foreach ($registerError as $Error){
+                echo "<li>",$Error,"</li>";
+              }
+              //print_r($registerError);
         }else{
+    print_r($registerError);
 		if(isset($password_ins) and emailValidation($email)){
               $query_insert="INSERT INTO users (username, email, password, rol) VALUES ('$username', '$email', '$password_ins','User')";
-              echo "query_insert $query_insert</br>";
+              //echo "query_insert $query_insert</br>";
               //insertar l'usuari a la base de dades
               $result = $db->query($query_insert);
               header("Location: index.php");

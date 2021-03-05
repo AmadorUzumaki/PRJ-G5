@@ -20,13 +20,13 @@ session_start();
 $_SESSION['username']=$user['username'];
 $_SESSION['rol']=$user['rol'];
 //comprovam si l'usuari existeix comparant els resultats
-if (password_verify($password,$user['password'])) {
+if (pwdVerification($password,$user['password'])) {
   header("Location: index.php");
 }
 elseif(!pwdVerification($password,$user['password']) && $user['username']) {
 	$loginMsg="La contrasenya no és correcta";
 }else {
-  $"Aquest usuari no existeix.";
+  $loginMsg="Aquest usuari no existeix.";
 }
 
 $conn->close();
