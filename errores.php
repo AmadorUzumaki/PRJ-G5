@@ -46,14 +46,11 @@
                           <div class="card-body my-5 py-5">
                             <h2>Error Page</h2>
                             <hr>
-                            <ul >
+                            <ul>
                             <h5>El possible error sea :</h5>
                             <?php
                             include "createUser.php";
-                            print_r($registerError);
-                            foreach ($registerError as $Error){
-                              echo "<li>",$Error,"</li>";
-                            }
+                            echo $_GET['error'];
                             ?>
                             </ul>
                           </div>

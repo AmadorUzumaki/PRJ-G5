@@ -25,8 +25,10 @@ if (pwdVerification($password,$user['password'])) {
 }
 elseif(!pwdVerification($password,$user['password']) && $user['username']) {
 	$loginMsg="La contrasenya no és correcta";
+  echo $loginMsg;
 }else {
   $loginMsg="Aquest usuari no existeix.";
+  echo $loginMsg;
 }
 
 $conn->close();

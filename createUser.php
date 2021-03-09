@@ -9,11 +9,11 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
     $registerError= array();
     if(isset($email)){
       if(!emailValidation($email))
-        $registerError[]="El correu no és vàl·lid, torna a provar.<br>";
+        $registerError[]="<li>El correu no és vàl·lid, torna a provar.</li>";
     }
     if((isset($_GET['password']))&&(isset($_GET['password2']))){
       if(!pwdValidation($_GET['password'],$_GET['password2'])){
-        $registerError[]="<b>Les contrasenyes no són iguals.</b> Torna-les a escriure.<br>";
+        $registerError[]="<li><b>Les contrasenyes no són iguals.</b> Torna-les a escriure.</li>";
       }else{
           $password_ins = encryptPass($_GET["password"]);
       }
@@ -33,12 +33,14 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
       $users=$result_select->fetch_object();
       //comprovam que l'usuari no existeix a la base de dades per evitar repetició d'usuaris.
        if($users != null){
-              $registerError[]="L'usuari ja existeix, prova un altre nom d'usuari.</br>";
-              header("Location: errores.php");
-              foreach ($registerError as $Error){
-                echo "<li>",$Error,"</li>";
-              }
-              //print_r($registerError);
+              $registerError[]="<li>L'usuari ja existeix, prova un altre nom d'usuari.</li>";
+        }
+        if($registerError !=null){
+          $Error_param="";
+          foreach ($registerError as $Error){
+            $Error_param=$Error_param."<br>".$Error;
+          }
+          header("Location: errores.php?error=$Error_param");
         }else{
     print_r($registerError);
 		if(isset($password_ins) and emailValidation($email)){
