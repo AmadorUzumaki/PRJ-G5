@@ -17,7 +17,7 @@
 
     </tr>
 <?php
-$db = new mysqli('localhost','phpmyadmin','1234','users');
+$db = new mysqli('10.100.66.117','phpmyadmin','1234','users');
 
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
@@ -31,8 +31,8 @@ while($row = $resultat->fetch_assoc()) {
       echo "<tr><td>" . $row["username"]. "</td>".
            "<td>" . $row["email"]."</td>".
            "<td>" . $row["password"]. "</td><br>".
-           "<td>" . $row["rol"]. "</td></tr><br>";
-      echo "<td><button name='cambiar' type='button'><a href='updateadmin.php?username=".$row["username"]"'> EDITAR </a></td>";
+           "<td>" . $row["rol"]. "</td><br>";
+      echo "<td><button name='cambiar' type='button'><a href='updateadmin.php?username='> EDITAR </a></td></tr>";
 }
 ?>
 </body>

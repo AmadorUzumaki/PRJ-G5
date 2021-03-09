@@ -2,8 +2,8 @@
 $servername = "localhost";
 $username = "phpmyadmin";
 $password = "1234";
-$dbname = "carstock";
-$plate=$_GET['plate'];
+$dbname = "users";
+$username=$_GET['username'];
 
 
 // Create connection
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM users  WHERE plate='$plate'";
+$sql = "DELETE FROM users  WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";

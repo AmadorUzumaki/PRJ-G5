@@ -2,11 +2,11 @@
 $servername = "localhost";
 $username = "phpmyadmin";
 $password = "1234";
-$dbname = "carstock";
-$plate=$_GET['plate'];
-$doors=$_GET['doors'];
-$colour=$_GET['colour'];
-$car_engine=$_GET['car_engine'];
+$dbname = "users";
+$username=$_GET['username'];
+$email=$_GET['email'];
+$password=$_GET['password'];
+$rol=$_GET['rol'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE users  SET colour='$colour', doors='$doors', car_engine='$car_engine' WHERE plate='$plate'";
+$sql = "UPDATE users  SET password='$password', email='$email', rol='$rol' WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully";
