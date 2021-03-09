@@ -4,9 +4,7 @@ $username = "phpmyadmin";
 $password = "1234";
 $dbname = "carstock";
 $plate=$_GET['plate'];
-$doors=$_GET['doors'];
-$colour=$_GET['colour'];
-$car_engine=$_GET['car_engine'];
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,12 +13,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE users  SET colour='$colour', doors='$doors', car_engine='$car_engine' WHERE plate='$plate'";
+// sql to delete a record
+$sql = "DELETE FROM users  WHERE plate='$plate'";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record updated successfully";
+  echo "Record deleted successfully";
 } else {
-  echo "Error updating record: " . $conn->error;
+  echo "Error deleting record: " . $conn->error;
 }
 
 $conn->close();
