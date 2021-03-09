@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "phpmyadmin";
 $password = "1234";
 $dbname = "users";
-$username=$_GET['username'];
+$user=$_GET['username'];
 $email=$_GET['email'];
 $password=$_GET['password'];
 $rol=$_GET['rol'];
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "UPDATE users  SET password='$password', email='$email', rol='$rol' WHERE username='$username'";
+$sql = "UPDATE users  SET password='$password', email='$email', rol='$rol' WHERE username='$user'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully";

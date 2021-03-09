@@ -17,7 +17,7 @@
 
     </tr>
 <?php
-$db = new mysqli('10.100.66.117','phpmyadmin','1234','users');
+$db = new mysqli('localhost','phpmyadmin','1234','users');
 
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
