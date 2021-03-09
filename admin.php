@@ -33,6 +33,9 @@ while($row = $resultat->fetch_assoc()) {
            "<td>" . $row["password"]. "</td><br>".
            "<td>" . $row["rol"]. "</td><br>";
         $user=  $row["username"];
+        $email=  $row["email"];
+        $pass=  $row["password"];
+        $rol=  $row["rol"];
       echo "<td><button name='cambiar' type='button'><a href='updateform.php?user=$user'> EDITAR </a></td></tr>";
 }
 ?>
