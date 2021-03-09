@@ -32,7 +32,7 @@ while($row = $resultat->fetch_assoc()) {
            "<td>" . $row["email"]."</td>".
            "<td>" . $row["password"]. "</td><br>".
            "<td>" . $row["rol"]. "</td></tr><br>";
-
+      echo "<td><button name='cambiar' type='button'><a href='updateadmin.php?username=".$row["username"]"'> EDITAR </a></td>";
 }
 ?>
 </body>
