@@ -62,7 +62,7 @@ function MostrarOcultar(capa,enlace)
 
                                         <input id="emailInput" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
                                       </div>
-                                      <button type="button" class="Password">Password</button>
+                                      <button action="remember_pass.php" type="button" class="Password">Password</button>
                                     </div>
                                     <!-- PARA VOLVER A PONER LA PASSWORD -->
                                       <a class="texto" href="javascript:MostrarOcultar('texto1');">a</a>
