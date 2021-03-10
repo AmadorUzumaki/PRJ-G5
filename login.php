@@ -80,6 +80,9 @@ span.psw {
 				<li class="current">
 					<a href="login.php"><span>LOGIN</span></a>
 				</li>
+				<li>
+					<a href="prueba_login.php"><span>ADMIN</span></a>
+				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>

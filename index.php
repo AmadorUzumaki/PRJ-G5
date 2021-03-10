@@ -41,6 +41,9 @@ session_start();
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
 					?>
+					<li>
+						<a href="prueba_login.php"><span>ADMIN</span></a>
+					</li>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>

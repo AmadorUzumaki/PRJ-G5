@@ -190,6 +190,9 @@ button.social-signin.google {
 					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li>
+					<a href="prueba_login.php"><span>ADMIN</span></a>
+				</li>
+				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
 						echo "Welcome, ". $_SESSION['username'];
