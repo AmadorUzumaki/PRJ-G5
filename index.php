@@ -15,27 +15,23 @@ session_start();
 				<li class="current">
 					<a href="index.php"><span>Home</span></a>
 				</li>
-				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<a href='packages.php'><span>Adventures</span></a>";
+						echo "<li><a href='packages.php'><span>Adventures</span></a></li>";
 					}
 					?>
-				</li>
-				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<a href='about.php'><span>About</span></a>";
+						echo "<li><a href='about.php'><span>About</span></a></li>";
 					}
 					?>
-				</li>
 				<li>
 					<a href="register.php"><span>Register</span></a>
 				</li>
 				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "Welcome, ". $_SESSION['username'],"<br>";
+						echo "Welcome, ". $_SESSION['username'];
 						echo "<a href='autodestruccio.php'>Log off</a>";
 					}
 					else{
@@ -43,13 +39,11 @@ session_start();
 					}
 					?>
 				</li>
-					<li>
 						<?php
 						if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
-							echo "<a href='prueba_login.php'><span>ADMIN</span></a>";
+							echo "<li><a href='prueba_login.php'><span>ADMIN</span></a></li>";
 						}
 						?>
-					</li>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>

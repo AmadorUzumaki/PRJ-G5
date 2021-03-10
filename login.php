@@ -68,11 +68,17 @@ span.psw {
 				<li>
 					<a href="index.php"><span>Home</span></a>
 				</li>
+				<?php
+				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+					echo "<li><a href='packages.php'><span>Adventures</span></a></li>";
+				}
+				?>
 				<li>
-					<a href="packages.php"><span>Adventures</span></a>
-				</li>
-				<li>
-					<a href="about.php"><span>About</span></a>
+					<?php
+					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+						echo "<li><a href='about.php'><span>About</span></a></li>";
+					}
+					?>
 				</li>
 				<li>
 					<a href="register.php"><span>Register</span></a>
