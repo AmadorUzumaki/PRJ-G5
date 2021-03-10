@@ -42,6 +42,7 @@ session_start();
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
 					?>
+				</li>
 					<li>
 						<?php
 						if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
