@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "phpmyadmin";
 $password = "1234";
 $dbname = "users";
-$username=$_GET['username'];
+$user=$_GET['user'];
 
 
 // Create connection
@@ -14,10 +14,11 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM users  WHERE username='$username'";
-
+$sql = "DELETE FROM users WHERE username='$user'";
+echo $sql;
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
+  header("Location: admin.php");
 } else {
   echo "Error deleting record: " . $conn->error;
 }
