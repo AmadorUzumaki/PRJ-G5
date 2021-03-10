@@ -35,7 +35,11 @@ session_start();
 					?>
 				</li>
 				<li>
-					<a href="prueba_login.php"><span>ADMIN</span></a>
+					<?php
+					if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
+						echo "<a href='prueba_login.php'><span>ADMIN</span></a>";
+					}
+					?>
 				</li>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
