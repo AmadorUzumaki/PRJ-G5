@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "phpmyadmin";
 $password = "12345";
 $dbname = "users";
-$comment=$_GET["comment"];
+$comment=$POST["comment"];
 session_start();
 $user=$_SESSION['username'];
 // Create connection
