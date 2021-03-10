@@ -82,6 +82,12 @@ session_start();
 				<div class="packages">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/wJF5NXygL4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
+				<div><br><br><br>
+					<form action="" id="usrform">
+					<textarea rows="15" cols="75" name="comment" form="usrform">Comment your opinion here...</textarea><br>
+  				<input type="submit">
+					</form>
+				</div>
 			</div>
 		</div>
 		<div id="footer">
