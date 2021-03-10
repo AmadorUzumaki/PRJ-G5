@@ -15,6 +15,8 @@
 
       <th>Rol</th>
 
+      <th>Accions</th>
+
     </tr>
 <?php
 $db = new mysqli('localhost','phpmyadmin','1234','users');
@@ -36,7 +38,9 @@ while($row = $resultat->fetch_assoc()) {
         $email=  $row["email"];
         $pass=  $row["password"];
         $rol=  $row["rol"];
-      echo "<td><button name='cambiar' type='button'><a href='updateform.php?user=",$user,"email=",$email,"pass=",$pass,"rol=",$rol,"> EDITAR </a></td></tr>";
+      echo "<td>";
+      echo "<a href='updateform.php?user=",$user,"&email=",$email,"&pass=",$pass"> EDITAR </a>";
+      echo "</td></tr>";
 }
 ?>
 </body>

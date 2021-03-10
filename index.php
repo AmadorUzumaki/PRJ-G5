@@ -32,20 +32,18 @@ session_start();
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
 						echo "Welcome, ". $_SESSION['username'];
-						echo "<a href='autodestruccio.php'>Log off</a>";
 					}
 					else{
 						echo "<a href='login.php'><span>LOGIN</span></a>";
 					}
 					?>
 				</li>
-<<<<<<< HEAD
-=======
-				<li>
-						<a href='autodestruccio.php'>Log off</a>
-				</li>
+				<?php
+				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+					echo "<li><a href='autodestruccio.php'>Log off</a></li>";
+				}
+				?>
 					<li>
->>>>>>> 069994a6d0e95d291e08dc85d4b833d027c91e03
 						<?php
 						if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
 							echo "<li><a href='prueba_login.php'><span>ADMIN</span></a></li>";
