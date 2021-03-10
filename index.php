@@ -43,6 +43,9 @@ session_start();
 					}
 					?>
 				</li>
+				<li>
+						<a href='autodestruccio.php'>Log off</a>
+				</li>
 					<li>
 						<?php
 						if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
