@@ -35,7 +35,8 @@ session_start();
 				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "Welcome, ". $_SESSION['username'];
+						echo "Welcome, ". $_SESSION['username'],"<br>";
+						echo "<a href='autodestruccio.php'>Log off</a>";
 					}
 					else{
 						echo "<a href='login.php'><span>LOGIN</span></a>";
