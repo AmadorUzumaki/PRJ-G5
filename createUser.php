@@ -19,7 +19,6 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
           $password_ins = encryptPass($_GET["password"]);
       }
     }
-  new User($username,$email, $password_ins, "User");
 
     //connexió amb la base de dades
     $db = new mysqli('localhost','phpmyadmin','1234','users');
@@ -46,8 +45,9 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
         }else{
     print_r($registerError);
 		if(isset($password_ins) and emailValidation($email)){
-              $query_insert="INSERT INTO users (username, email, password, rol) VALUES ('$username', '$email', '$password_ins','User')";
-              //echo "query_insert $query_insert</br>";
+
+              $User1 = new User($username,$email, $password_ins, "User");
+              $query_insert="INSERT INTO Users (Dni,Usuario,Contrasenya,Correo,Sexo) VALUES ('" .$User1->getUsername() ."','" .$User1->getEmail()."', '".$User1->getPassword()."', '".$User1->getRol()."')";
               //insertar l'usuari a la base de dades
               $result = $db->query($query_insert);
               header("Location: index.php");
