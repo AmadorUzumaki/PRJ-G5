@@ -63,23 +63,29 @@ session_start();
 						<li class="section">
 							<h3>Sky Diving</h3>
 							<p>
-								This is just a place holder, so you can see what the site would look like.
-							</p>
-							<span class="price">$ 60</span>
+								We offer a memorable first time tandem skydive experience! For those looking to become skydivers,
+								we have beginner skydiving courses; the Accelerated Freefall Course (AFF) held regularly at our dropzone
+							</p><br>
+							<span class="price">$ 50</span>
 						</li>
 						<li>
 							<h3>Hot Air Balloons</h3>
 							<p>
-								This is just a place holder, so you can see what the site would look like.
-							</p>
+								­If you actually need to get somewhere, a hot air balloon is a fairly impractical vehicle.
+								You can't really steer it, ­and it only travels as fast as the wind blows.
+								But if you simply want to enjoy the experience of flying,
+								there's nothing quite like it. .
+							</p><br>
 							<span class="price">$ 60</span>
 						</li>
 						<li class="section">
 							<h3>Gliding</h3>
 							<p>
-								This is just a place holder, so you can see what the site would look like.
-							</p>
-							<span class="price">$ 60</span>
+								Pilots like to challenge themselves. Perhaps to fly around a pre-determined route that they think is the best that can be achieved given the forecast weather conditions.
+								In planning a flight, they will consider their glider performance and their skill level.
+								If they succeed and get around their planned route they will probably enter this into their club or national ‘league’ online.
+							</p><br>
+							<span class="price">$ 70</span>
 						</li>
 					</ul>
 					<a href="packages.php" class="view">View All</a>
