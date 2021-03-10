@@ -1,5 +1,6 @@
 <?php
 include "functions.php";
+require 'user.php';
 if($_SERVER["REQUEST_METHOD"]=="GET"){
   //Comprovam que el camp que utilitzam com a clau primària a la base de dades existeix y té un valor lògic
   if ($_GET["username"]!=null && $_GET["username"]!=""){
@@ -18,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
           $password_ins = encryptPass($_GET["password"]);
       }
     }
+  new User($username,$email, $password_ins, "User");
 
     //connexió amb la base de dades
     $db = new mysqli('localhost','phpmyadmin','1234','users');
