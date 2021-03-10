@@ -39,7 +39,7 @@ while($row = $resultat->fetch_assoc()) {
         $pass=  $row["password"];
         $rol=  $row["rol"];
       echo "<td>";
-      echo "<a href='updateform.php?user=",$user,"&email=",$email,"&pass=",$pass"> EDITAR </a>";
+      echo "<a href='updateform.php?user=$user&email=$email&pass=$pass'> EDITAR </a>";
       echo "</td></tr>";
 }
 ?>
