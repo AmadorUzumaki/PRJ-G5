@@ -47,7 +47,7 @@
                             <h2>Error Page</h2>
                             <hr>
                             <ul>
-                            <h5>El possible error sea :</h5>
+                            <h5>Els errors són els següents:</h5>
                             <?php
                             include "createUser.php";
                             echo $_GET['error'];
@@ -55,7 +55,7 @@
                             </ul>
                           </div>
                         </div>
-                        <a href="register.php"><button class="button button2">Volver a registrarse</button></a>
+                        <a href="register.php"><button class="button button2">Tornar a registrar-se</button></a>
     		        </div>
     		        <div class="col-md-6">
 

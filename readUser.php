@@ -16,11 +16,11 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM users where username='$username'";
 $result_select = $conn->query($sql);
 $user=$result_select->fetch_assoc();
-session_start();
-$_SESSION['username']=$user['username'];
-$_SESSION['rol']=$user['rol'];
 //comprovam si l'usuari existeix comparant els resultats
 if (pwdVerification($password,$user['password'])) {
+  session_start();
+  $_SESSION['username']=$user['username'];
+  $_SESSION['rol']=$user['rol'];
   header("Location: index.php");
 }
 elseif(!pwdVerification($password,$user['password']) && $user['username']) {
@@ -28,6 +28,7 @@ elseif(!pwdVerification($password,$user['password']) && $user['username']) {
 }else {
   $loginMsg="Aquest usuari no existeix.";
 }
+if($loginMsg!=null)
 header("Location: error-log.php?error=$loginMsg");
 
 $conn->close();

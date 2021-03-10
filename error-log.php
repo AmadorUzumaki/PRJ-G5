@@ -140,9 +140,9 @@ text-decoration: none;
 				<div class="notfound-404">
 					<h1>!</h1>
 				</div>
-				<?php echo "<h2>",$_GET['error'],"</h2>";?>
+				<?php echo "<h2>ERROR</h2>";?>
 			</div>
-			<p>Por favor, volver a revisar los datos introducidos <a href="login.php"><br>VOLVER A INICIAR SESION</a></p>
+			<p><?php echo $_GET['error'];?>. Per favor, revisa les dades introduïdes. <a href="login.php"><br>TORNAR A INICIAR SESSIÓ</a></p>
 		</div>
 	</div>
 
