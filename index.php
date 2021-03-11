@@ -108,6 +108,7 @@ session_start();
 				}
 				?>
 				<div>
+				<table>
 				<?php
 				      $db1 = new mysqli('localhost','phpmyadmin','1234','users');
 
@@ -123,8 +124,9 @@ session_start();
 				            echo "<tr><td>" . $row["username"]. "</td>".
 				                 "<td>" . $row["comment"]."</td></tr>";
 				      }
-				      ?>
-						</div>
+				?>
+			  </table>
+				</div>
 			</div>
 		</div>
 		<div id="footer">
