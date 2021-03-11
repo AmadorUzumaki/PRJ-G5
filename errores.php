@@ -49,7 +49,7 @@
                             <ul>
                             <h5>Els errors són els següents:</h5>
                             <?php
-                            include "createUser.php";
+                            //mostram per pantalla els errors que hem rebut de la pàgina anterior
                             echo $_GET['error'];
                             ?>
                             </ul>

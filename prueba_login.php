@@ -1,4 +1,5 @@
 <?php
+//utilitzam les variables de sessió que s'han creat en fer login correctament per fer que surti el nom d'usuari en oantalla
 session_start();
 ?>
 <!DOCTYPE html>

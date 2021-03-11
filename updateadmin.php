@@ -5,20 +5,20 @@ $password = "1234";
 $dbname = "users";
 $user=$_GET['username'];
 $email=$_GET['email'];
-$password=$_GET['password'];
 $rol=$_GET['rol'];
 
-// Create connection
+// cream la connexió
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+// comprova si funciona
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "UPDATE users  SET password='$password', email='$email', rol='$rol' WHERE username='$user'";
-
+//feim la query que volem executar
+$sql = "UPDATE users  SET  email='$email', rol='$rol' WHERE username='$user'";
+//comprovam que la query funciona, i si funciona, mos redirigeix a la pàgina de l'admin
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully";
+  header("Location: admin.php");
 } else {
   echo "Error updating record: " . $conn->error;
 }

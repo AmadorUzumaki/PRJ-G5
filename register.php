@@ -180,30 +180,29 @@ button.social-signin.google {
 				<li>
 					<a href="index.php"><span>Home</span></a>
 				</li>
-				<li>
 					<?php
+					//comprovam que les variables de sessió estigui inicialitzada i no sigui nula, i si és així, podem accedir a altres pàgines, a més que envers de la finestra de login, puguis veure que tens la sessió iniciada i tens una finestra per tancar-la
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<a href='packages.php'><span>Adventures</span></a>";
+						echo "<li><a href='packages.php'><span>Adventures</span></a>
+					</li>";
 					}
 					?>
-				</li>
-				<li>
+
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<a href='about.php'><span>About</span></a>";
+						echo "<li><a href='about.php'><span>About</span></a>
+					</li>";
 					}
 					?>
-				</li>
 				<li class="current">
 					<a href="register.php"><span>Register</span></a>
 				</li>
-				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<a href='prueba_login.php'><span>ADMIN</span></a>";
+						echo "<li><a href='prueba_login.php'><span>ADMIN</span></a>
+					</li>";
 					}
 					?>
-				</li>
 				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){

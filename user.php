@@ -25,4 +25,5 @@ $this->email=$email;
 $this->password=$password;
 $this->rol=$rol;
 }
+}
 ?>

@@ -16,6 +16,7 @@ session_start();
 					<a href="index.php"><span>Home</span></a>
 				</li>
 					<?php
+					//comprovam que les variables de sessió estigui inicialitzada i no sigui nula, i si és així, podem accedir a altres pàgines, a més que envers de la finestra de login, puguis veure que tens la sessió iniciada i tens una finestra per tancar-la
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
 						echo "<li><a href='packages.php'><span>Adventures</span></a></li>";
 					}
@@ -93,12 +94,16 @@ session_start();
 				<div class="packages">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/wJF5NXygL4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<div><br><br><br>
-					<form action="comments.php" id="usrform" method="post">
-					<textarea rows="15" cols="75" name="comment" form="usrform">Comment your opinion here...</textarea><br>
-  				<input type="submit">
-					</form>
-				</div>
+				<?php
+				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+				echo	"<div><br><br><br>
+						<form action='comments.php' id='usrform' method='post'>
+						<textarea rows='15' cols='75' name='comment' form='usrform'>Comment your opinion here...</textarea><br>
+	  				<input type='submit'>
+						</form>
+					</div>";
+				}
+				?>
 			</div>
 		</div>
 		<div id="footer">
