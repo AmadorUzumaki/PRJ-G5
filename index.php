@@ -104,6 +104,24 @@ session_start();
 					</div>";
 				}
 				?>
+				<div>
+				<?php
+				      $db1 = new mysqli('localhost','phpmyadmin','1234','users');
+
+				      if ($db1->connect_error) {
+				        die("Connection failed: " . $db1->connect_error);
+				      }else{
+				              echo "<br>";
+				      }
+
+				      $sql1 = "SELECT * FROM comments";
+				      $resultat = $db1->query($sql1);
+				      while($row = $resultat->fetch_assoc()) {
+				            echo "<tr><td>" . $row["username"]. "</td>".
+				                 "<td>" . $row["comment"]."</td></tr>";
+				      }
+				      ?>
+						</div>
 			</div>
 		</div>
 		<div id="footer">
