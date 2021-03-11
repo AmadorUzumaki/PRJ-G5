@@ -197,12 +197,6 @@ button.social-signin.google {
 				<li class="current">
 					<a href="register.php"><span>Register</span></a>
 				</li>
-					<?php
-					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-						echo "<li><a href='prueba_login.php'><span>ADMIN</span></a>
-					</li>";
-					}
-					?>
 				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
@@ -213,6 +207,18 @@ button.social-signin.google {
 					}
 					?>
 				</li>
+				<?php
+				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+					echo "<li><a href='autodestruccio.php'>Log off</a></li>";
+				}
+				?>
+					<?php
+					if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
+						echo "
+						<li><a href='prueba_login.php'><span>ADMIN</span></a>
+					</li>";
+					}
+					?>
 			</ul>
 			<a href="index.php" id="logo"><img src="images/logo.png" alt="Logo"></a>
 		</div>

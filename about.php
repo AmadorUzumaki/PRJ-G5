@@ -23,9 +23,12 @@ session_start();
 				?>
 				<?php
 				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-					echo "<li><a href='about.php'><span>About</span></a></li>";
+					echo "<li class='current'><a href='about.php'><span>About</span></a></li>";
 				}
 				?>
+				<li>
+					<a href="register.php"><span>Register</span></a>
+				</li>
 				<li>
 					<?php
 					if(isset($_SESSION['username']) && $_SESSION['username']!=null){
@@ -36,6 +39,11 @@ session_start();
 					}
 					?>
 				</li>
+				<?php
+				if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+					echo "<li><a href='autodestruccio.php'>Log off</a></li>";
+				}
+				?>
 				<li>
 				<?php
 					if(isset($_SESSION['rol']) && $_SESSION['rol']=="Admin"){
