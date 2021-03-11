@@ -90,7 +90,7 @@ session_start();
 						</li>
 					</ul>
 					<?php if(isset($_SESSION['username']) && $_SESSION['username']!=null){
-					echo "<a href='packages.php' class='view'>View All</a>"
+					echo "<a href='packages.php' class='view'>View All</a>";
 				}
 				?>
 				</div>
