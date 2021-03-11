@@ -89,7 +89,10 @@ session_start();
 							<span class="price">$ 70</span>
 						</li>
 					</ul>
-					<a href="packages.php" class="view">View All</a>
+					<?php if(isset($_SESSION['username']) && $_SESSION['username']!=null){
+					echo "<a href='packages.php' class='view'>View All</a>"
+				}
+				?>
 				</div>
 				<div class="packages">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/wJF5NXygL4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
