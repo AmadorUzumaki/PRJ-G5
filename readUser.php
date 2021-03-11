@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM users where username='$username'";
 $result_select = $conn->query($sql);
 $user=$result_select->fetch_assoc();
-//comprovam si la contrasenya per l'usuari escrit coincideix amb la contrasenya introduïda al formulari, i si es així, crea les variables de sessió amb les dades necessàries de l'usuari i redirigeix cap a la pàgina principal.
+//comprovam si la contrasenya (en forma de hash) per l'usuari dins la base de dades coincideix amb la contrasenya introduïda al formulari, i si es així, crea les variables de sessió amb les dades necessàries de l'usuari i redirigeix cap a la pàgina principal.
 if (pwdVerification($password,$user['password'])) {
   session_start();
   $_SESSION['username']=$user['username'];
