@@ -239,9 +239,9 @@ button.social-signin.google {
   <div class="right">
     <span class="loginwith">Sign in with<br />social network</span>
 
-    <button class="social-signin facebook">Log in with facebook</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
+    <a href="https://ca-es.facebook.com/"><button class="social-signin facebook">Log in with facebook</button></a>
+    <a href="https://twitter.com/login?lang=ca"><button class="social-signin twitter">Log in with Twitter</button></a>
+    <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><button class="social-signin google">Log in with Google+</button></a>
   </div>
   <div class="or">OR</div>
 </div>
