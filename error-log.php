@@ -143,7 +143,7 @@ text-decoration: none;
 				<?php echo "<h2>ERROR</h2>";?>
 			</div>
       <!-- Mostram per pantalla l'error que hem rebut de la pàgina anterior -->
-			<p><?php echo $_GET['error'];?>. Per favor, revisa les dades introduïdes. <a href="login.php"><br>TORNAR A INICIAR SESSIÓ</a></p>
+			<p><?php echo $_GET['error'];?> Per favor, revisa les dades introduïdes. <a href="login.php"><br>TORNAR A INICIAR SESSIÓ</a></p>
 		</div>
 	</div>
 

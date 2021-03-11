@@ -25,7 +25,7 @@ if (pwdVerification($password,$user['password'])) {
 }
 //en cas que no sigui correcta, i si l'usuari existeix, guardam un missatge que després s'executarà en altre pàgina
 elseif(!pwdVerification($password,$user['password']) && $user['username']) {
-	$loginMsg="La contrasenya no és correcta";
+	$loginMsg="La contrasenya no és correcta.";
 //en cas que no coincideixi res, significa que l'usuari no existex, per la qual cosa guardarà un altre missatge
 }else {
   $loginMsg="Aquest usuari no existeix.";
