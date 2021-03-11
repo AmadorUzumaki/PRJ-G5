@@ -108,7 +108,9 @@ session_start();
 				}
 				?>
 				<div>
-				<table>
+
+				<table style="order-collapse: separate;  border-spacing: 50px 34px;">
+											<h3 align="center">COMMENTS</h3>
 				<?php
 				      $db1 = new mysqli('localhost','phpmyadmin','1234','users');
 
