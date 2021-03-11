@@ -43,8 +43,8 @@ while($row = $resultat->fetch_assoc()) {
         $rol=  $row["rol"];
       echo "<td>";
       //cream botons que redirigiran a les pàgines que faran el canvi seleccionat, amb tots els camps necessaris com a paràmetres
-      echo "<a href='updateform.php?user=$user&email=$email&pass=$pass&rol=$rol'><input type='button' style="color:blue;" value='EDITAR'></a> ";
-      echo "<a href='deleteadmin.php?user=$user'><input type='button' value='ELIMINAR'></a>";
+      echo "<a href='updateform.php?user=$user&email=$email&pass=$pass&rol=$rol'><input type='button' style='color:blue;' value='EDITAR'></a> ";
+      echo "<a href='deleteadmin.php?user=$user'><input type='button' style='color:red;' value='ELIMINAR'></a>";
       echo "</td></tr>";
 }
 ?>
